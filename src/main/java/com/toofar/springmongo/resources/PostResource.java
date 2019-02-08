@@ -35,6 +35,13 @@ public class PostResource {
 		return ResponseEntity.ok().body(list);
 	}
 	
+	/**
+	 * http://localhost:8080/posts/fullsearch?text=bom&max=2018-03-22
+	 * @param text
+	 * @param minDate
+	 * @param maxDate
+	 * @return
+	 */
 	@RequestMapping(value="/fullsearch", method=RequestMethod.GET)
  	public ResponseEntity<List<Post>> fullSearch(
  			@RequestParam(value="text", defaultValue="") String text,
